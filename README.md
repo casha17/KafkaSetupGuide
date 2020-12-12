@@ -52,3 +52,29 @@ nano /usr/local/kafka/config/server.properties
 ``` 
 
 
+# 
+Start zookeeper 
+```
+/usr/local/zookeeper/bin/zkServer.sh start
+```
+
+# 
+Start kafka 
+```
+/usr/local/kafka/bin/kafka-server-start.sh -daemon /usr/local/kafka/config/server.properties
+```
+
+# 
+See brokers 
+```
+/usr/local/kafka/bin/zookeeper-shell.sh node-master:2181 ls /brokers/ids
+```
+
+# 
+hdfs and yarn 
+```
+start-dfs.sh 
+stop-dfs.sh 
+start-yarn.sh
+stop-yarn.sh
+```
