@@ -78,3 +78,14 @@ stop-dfs.sh
 start-yarn.sh
 stop-yarn.sh
 ```
+# Delete topic 
+```
+
+/usr/local/kafka/bin/kafka-topics.sh --zookeeper node-master:2181,node1:2181,node2:2181 --delete --topic twitterraw
+```
+
+# Create topic 
+```
+/usr/local/kafka/bin/kafka-topics.sh --create --zookeeper node-master:2181,node1:2181,node2:2181 --replication-factor 3 --partitions 3 --topic twitterraw
+```
+
